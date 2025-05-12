@@ -66,6 +66,13 @@ app.use(asyncHandler(links.redirectCustomDomainHomepage));
 // render html pages
 app.use("/", routes.render);
 
+app.get('/', (req, res) => {
+  res.send(`
+    <h1>Welcome to FQ Shortener</h1>
+    <p>This is your live deployed URL shortener. Paste your shortened links to see interstitial!</p>
+  `);
+});
+
 // handle api requests
 app.use("/api/v2", routes.api);
 app.use("/api", routes.api);
