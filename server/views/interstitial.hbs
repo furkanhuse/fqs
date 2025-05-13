@@ -85,7 +85,18 @@
     function redirectNow() {
       window.location.href = destination;
     }
-  </script>
+  <script>
+  function wrongClick() {
+    alert("Wrong button! Try again.");
+  }
+
+  function redirect() {
+    const target = "{{url}}"; // This comes from url.js
+    if (target) {
+      window.location.href = target;
+    }
+  }
+</script>
 </body>
 </html>
 
